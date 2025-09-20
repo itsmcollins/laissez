@@ -1,5 +1,5 @@
 [project]
-name = "mcp"
+name = "laissez-mcp"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -9,4 +9,5 @@ dependencies = [
     "python-dotenv>=1.1.1",
     "x402>=0.2.1",
     "web3>=7.10.0",
+    "fastmcp>=2.12.3",
 ]
