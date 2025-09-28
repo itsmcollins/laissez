@@ -1,103 +1,124 @@
-import Image from "next/image";
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="dark">
+      <div className="relative min-h-screen bg-background text-foreground">
+        {/* Header */}
+        <header className="fixed inset-x-0 top-4 z-50">
+          <div className="mx-auto max-w-2xl px-6">
+            <div className="flex items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur-xl shadow-lg shadow-black/20 px-6 py-3">
+              <div className="text-2xl sm:text-3xl font-semibold tracking-tight">Laissez</div>
+            </div>
+          </div>
+        </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        {/* Hero Section */}
+        <section className="min-h-screen w-full flex items-center">
+          <div className="absolute inset-0 -z-10">
+            <div className="pointer-events-none absolute left-1/2 top-24 -translate-x-1/2 h-[40vh] w-[60vw] rounded-full bg-emerald-700/20 blur-3xl" />
+          </div>
+          <div className="mx-auto max-w-6xl px-6 flex flex-col items-center text-center gap-6">
+            <h1 className="text-4xl sm:text-6xl font-semibold tracking-tight">
+              All‑in‑one agentic payments with observability and control
+            </h1>
+            <p className="text-muted-foreground max-w-2xl">
+              Companies lack visibility into agentic spend. Laissez offers unified observability and policy‑driven controls for every payment your agents make via the x402 protocol.
+            </p>
+            <div className="flex gap-4">
+              <Button asChild className="bg-emerald-700 hover:bg-emerald-600">
+                <Link href="/platform">Launch platform</Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Problem / Why Section */}
+        <section className="min-h-screen w-full flex items-center">
+          <div className="mx-auto max-w-6xl px-6 w-full">
+            <div className="mb-10">
+              <h2 className="text-2xl sm:text-3xl font-semibold">Why enterprises need Laissez</h2>
+              <p className="text-muted-foreground mt-2 max-w-2xl">
+                Get a breakdown of agent spend, enforce policies, and keep budgets safe while your agents move fast.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Card className="backdrop-blur-xl bg-white/[0.04] border-white/10">
+                <CardHeader>
+                  <CardTitle>Observability</CardTitle>
+                  <CardDescription>Real‑time visibility into every transaction initiated by your agents.</CardDescription>
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground">
+                  Trace spend by agent, project, and wallet. Detect anomalies before they become incidents.
+                </CardContent>
+              </Card>
+              <Card className="backdrop-blur-xl bg-white/[0.04] border-white/10">
+                <CardHeader>
+                  <CardTitle>Policy control</CardTitle>
+                  <CardDescription>Allow or deny actions with declarative policies.</CardDescription>
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground">
+                  Define what agents can do, where, and for how much. Block risky vendors or categories.
+                </CardContent>
+              </Card>
+              <Card className="backdrop-blur-xl bg-white/[0.04] border-white/10">
+                <CardHeader>
+                  <CardTitle>Audit & compliance</CardTitle>
+                  <CardDescription>Every action is logged, attributed, and exportable.</CardDescription>
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground">
+                  Ship audits in hours, not weeks. Laissez keeps you ready for review.
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* How it works Section */}
+        <section className="min-h-screen w-full flex items-center">
+          <div className="mx-auto max-w-6xl px-6 w-full">
+            <div className="mb-10 text-center">
+              <h2 className="text-2xl sm:text-3xl font-semibold">Simple by design</h2>
+              <p className="text-muted-foreground mt-2">Create wallets. Write policies. Connect your Laissez MCP server to your AI systems.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Card className="backdrop-blur-xl bg-white/[0.04] border-white/10">
+                <CardHeader>
+                  <CardTitle>1. Create wallets</CardTitle>
+                  <CardDescription>Scoped to projects, teams, or agents.</CardDescription>
+                </CardHeader>
+              </Card>
+              <Card className="backdrop-blur-xl bg-white/[0.04] border-white/10">
+                <CardHeader>
+                  <CardTitle>2. Write policies</CardTitle>
+                  <CardDescription>Budgets, vendors, limits, approvals.</CardDescription>
+                </CardHeader>
+              </Card>
+              <Card className="backdrop-blur-xl bg-white/[0.04] border-white/10">
+                <CardHeader>
+                  <CardTitle>3. Connect MCP</CardTitle>
+                  <CardDescription>Use x402 for agentic payments in production.</CardDescription>
+                </CardHeader>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="min-h-screen w-full flex items-center">
+          <div className="mx-auto max-w-6xl px-6 flex flex-col items-center text-center gap-6">
+            <h2 className="text-3xl sm:text-4xl font-semibold">Try Laissez</h2>
+            <p className="text-muted-foreground max-w-xl">
+              Get observability, policies, and peace of mind for agentic payments.
+            </p>
+            <Button asChild className="bg-emerald-700 hover:bg-emerald-600">
+              <Link href="/platform">Go to platform</Link>
+            </Button>
+          </div>
+        </section>
+      </div>
     </div>
-  );
+  )
 }
